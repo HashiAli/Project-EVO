@@ -1,66 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style2.css">
     <link rel="shortcut icon" href="code-alt-regular-24.png" type="image/x-icon">
 </head>
 
 <body>
-    <div class="wrapper">
-        <h1>Registration Form</h1>
-        <p>Please fill out this form with the required information</p>
-            <form method="post" action='#' class="form">
-                <div class="Input-bxs">-
+    <div class="container">
+        <h1 class="text-center">Registration Form</h1>
+        <p class="text-center">Please fill out this form with the required information</p>
+        <form method="post" action="">
+            <div class="input-bx">
 
-                    <label for="first-name">Enter Your First Name:</label>
-                    <input id="first-name" name="first-name" type="text"
-                        required />
-
-                    <label for="last-name">Enter Your Last Name:</label> 
-                    <input id="last-name" name="last-name" type="text"
-                            required />
-
-                    <label>Enter Your Email:</label>
-                    <input id="email" name="email" type="email" required />
-
-                    <label for="new-password">Create a New Password:</label>
-                    <input id="new-password" name="new-password" type="password" required />
-
-            </div>
-            
-            <div class="Bio-bxs">
-                <label for="profile-picture">Upload a profile picture: </label> 
-                <input id="profile-picture" type="file"
-                        name="file" />
-
-                <label for="age">Input your age: </label>
-                <input id="age" type="number" name="age" min="13" max="120" />
-        
-                <label for="referrer">How did you hear about us?</label>
-                    <select id="referrer" name="referrer">
-                        <option value="">(select one)</option>
-                        <option value="1">freeCodeCamp News</option>
-                        <option value="2">freeCodeCamp YouTube Channel</option>
-                        <option value="3">freeCodeCamp Forum</option>
-                        <option value="4">Other</option>
-
-                    </select>
+                <div class="form-group" >
+                    <label for="first-name">First Name:</label>
+                    <input type="text" class="form-control" id="first-name" name="first-name" required>
                 </div>
-
-            <div class="terms">
-                <input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" />
-                <label for="terms-and-conditions">I accept the <a
-                    href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a>
-                </label>
+                <div class="form-group">
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" class="form-control" id="last-name" name="last-name" required>
+                </div>
+                <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
             </div>
-            <div class="submit-btn">
-                <input type="submit" value="Submit" />
+            <div class="form-group">
+                <label for="new-password">Password:</label>
+                <input type="password" class="form-control" id="new-password" name="new-password" required>
             </div>
-            
-            </form>
+        </div>
+            <div class="form-group">
+                <label>Account Type:</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="personal-account" name="account-type" checked>
+                    <label class="form-check-label" for="personal-account">Personal</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" id="business-account" name="account-type">
+                    <label class="form-check-label" for="business-account">Business</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="profile-picture" class="file-input-label">Upload a Profile Picture:</label>
+                <input type="file" class="form-control-file" id="profile-picture" name="file">
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" class="form-control" id="age" name="age" min="13" max="120">
+            </div>
+            <div class="form-group">
+                <label for="referrer">How did you hear about us?</label>
+                <select class="form-control" id="referrer" name="referrer">
+                    <option value="">(Select one)</option>
+                    <option value="1">freeCodeCamp News</option>
+                    <option value="2">freeCodeCamp YouTube Channel</option>
+                    <option value="3">freeCodeCamp Forum</option>
+                    <option value="4">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="bio">Bio</label>
+                <textarea class="form-control" id="bio" name="bio" rows="3"
+                    placeholder="I like coding on the beach..."></textarea>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="terms-and-conditions" required
+                    name="terms-and-conditions">
+                <label class="form-check-label" for="terms-and-conditions">I accept the <a
+                        href="https://www.freecodecamp.org/news/terms-of-service/">terms and conditions</a></label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </div>
-    </body>
+    <!-- Include Bootstrap JS and jQuery (for Bootstrap functionality) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
 </html>

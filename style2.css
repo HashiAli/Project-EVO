@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Autour+One&display=swap');
+
+body{
+    background-image: url(BG1.jpg);
+    backdrop-filter: blur(2px);
+    color: white;
+    font-family:'AtourOne',cursive;
+}
+.container{
+    /* background-color: black; */
+    backdrop-filter: blur(10px);
+    margin: 10px,10px,10px,10px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    max-width: 50%;
+}
+
